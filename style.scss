@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+
+    @media only screen and(max-width:600px){
+        font-size: 80%;
+    }
+}
+
+body {
+    background: #dce35b; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to right,
+        #45b649,
+        #dce35b
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #45b649,
+        #dce35b
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: grid;
+    place-items: center;
+    font-family: 'Lato',sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+.quiz {
+    width: 90%;
+    min-height: 70vh;
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0 0 1rem rgba(black, 0.4);
+    position: relative;
+
+    &__score{
+        font-size: 2rem;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        text-transform: uppercase;
+    }
+    &__label{
+        text-align: center;
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        text-shadow: 5px 5px 0 rgba(black, 0.4);
+    }
+
+    &__content{
+        border: 10px double limegreen;
+        font-size: 2rem;
+        padding: 1rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    &__choices{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        height: 40%;
+        grid-gap: 1rem;
+    }
+
+    &__choice{
+        display: block;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: 300ms;
+        height: 5rem;
+        padding: 1rem;
+        &:hover{
+            transform: translateY(-5px);
+        }
+        &--1{
+            background-color: #2ecc71;
+        }
+        &--2{
+            background-color: #2980b9;
+        }
+        &--3{
+            background-color: #c0392b;
+        }
+        &--4{
+            background-color: #8e44ad;
+        }
+    }
+}

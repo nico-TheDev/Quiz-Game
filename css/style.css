@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+body {
+  background: #dce35b;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#45b649), to(#dce35b));
+  background: linear-gradient(to right, #45b649, #dce35b);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-family: 'Lato',sans-serif;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+.quiz {
+  width: 90%;
+  min-height: 70vh;
+  background-color: white;
+  padding: 2rem;
+  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.quiz__score {
+  font-size: 2rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  text-transform: uppercase;
+}
+
+.quiz__label {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+.quiz__content {
+  border: 10px double limegreen;
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.quiz__choices {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  height: 40%;
+  grid-gap: 1rem;
+}
+
+.quiz__choice {
+  display: block;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: white;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  height: 5rem;
+  padding: 1rem;
+}
+
+.quiz__choice:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.quiz__choice--1 {
+  background-color: #2ecc71;
+}
+
+.quiz__choice--2 {
+  background-color: #2980b9;
+}
+
+.quiz__choice--3 {
+  background-color: #c0392b;
+}
+
+.quiz__choice--4 {
+  background-color: #8e44ad;
+}
+/*# sourceMappingURL=style.css.map */
